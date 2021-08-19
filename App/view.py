@@ -23,6 +23,7 @@
  * Dario Correal - Version inicial
  """
 
+from App.controller import loadBooksTags
 import config as cf
 import sys
 import controller
@@ -78,6 +79,8 @@ while True:
 
     elif int(inputs[0])== 3 :
         print("Cargando información de libros y tags...")
+        booktags = loadBooksTags()
+        print('Total de booktags cargados: ' + str(lt.size(booktags)))
 
     else:
         sys.exit(0)
